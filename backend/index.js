@@ -1,26 +1,30 @@
 import express from 'express';
 import cors from "cors";
 import fs from "fs";
+import { sql } from './config/database.js';
+import { user } from "./src/router/user.js";
+
 
 const app = express();
 app.use(cors());
-const DATABASE_URL= "./database.json"
+app.use(express.json())
+const PORT = 8080;
 
-const users = fs.readFileSync(DATABASE_URL, (error)=>{
-   console.log(error);
-})
+app.use("/users", user)
 
- const PORT = 8080;
-
- app.get ("/", (request, response)=>{
-   console.log(JSON.parse(users));
+ app.post("/users", async (req, res) => {
+  const data = await sql`INSERT INTO users (name, email) VALUES ('gumbee','gumbee@gmail.com') RETURNING *`;
+  res.send(data)
  })
-
- app.post ("/", (request, response)=>{
-   console.log(request.body);
-   response.send(" post AMJILTTAI")
+ app.post ("/users/createTable", async (req, res)=>{
+  const data = await sql`INSERT INTO users (name, email) VALUES ('gumbee','gumbee@gmail.com') RETURNING *`;
+   console.log(data);
+   res.send(data)
  })
-
- app.listen (PORT, (request, response)=>{
+ app.delete("/users/dropTable", async (req, res)=>{
+  const data = await sql`DROP TABLE users`;
+  res.send(data)
+ })
+ app.listen (PORT, (request, res)=>{
    console.log(`express server is working on ${PORT}`);
  })
