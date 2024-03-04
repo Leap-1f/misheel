@@ -1,6 +1,6 @@
 import { FaPlus } from "react-icons/fa";
 export function Header() {
-    return <div className="flex justify-between bg-slate-200 px-[200px] py-[20px] h-[fit]">
+    return <div className="flex justify-between px-[200px] max-xl:px-[100px] max-lg:px-[50px] py-[20px] h-[fit]">
         <div className="flex gap-5">
             <img src="Frame 3.png" alt="" />
             <button>
