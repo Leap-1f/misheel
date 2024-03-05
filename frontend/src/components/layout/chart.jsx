@@ -17,20 +17,20 @@ export function Chart() {
     ]
     })
     return <div className="grid grid-cols-2 px-[200px] gap-6 max-xl:px-[100px] max-lg:grid-cols-1">
-        <div className=" bg-white rounded-2xl h-[350px]">
+        <div className=" bg-white rounded-2xl h-fit">
             <div className="font-bold p-3">Income - Expense</div>
             <hr />
-            <div className=" w- max">
+            <div className="">
                 <BarChart chartData={userData}/>
             </div>
         </div>
-        <div className=" bg-white rounded-2xl h-[350px]">
+        <div className=" bg-white rounded-2xl h-fit">
             <div className=" flex justify-between p-3">
                 <div className="font-bold">Income - Expense</div>
                 <div className="text-gray-600">Jun 1 - Nov 30</div>
             </div>
             <hr />
-            <div className=" w-[300px]">
+            <div className=" w-[400px]">
                 <PieChart chartData={userData}/>
             </div>
         </div>

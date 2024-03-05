@@ -4,7 +4,7 @@ import { PiHouseFill } from "react-icons/pi";
 export function RecordData (){
     return <div className="flex flex-col gap-4 p-4">
         {ChartData.map((ChartData) => {
-            return(<div className="flex justify-between">
+            return(<div className="flex justify-between" key={ChartData.id}>
                     <div className="flex items-center gap-2">
                         <div className="bg-blue-600 w-[40px] h-[40px] flex items-center justify-center rounded-full">
                             <PiHouseFill className=" text-white text-xl"/>
