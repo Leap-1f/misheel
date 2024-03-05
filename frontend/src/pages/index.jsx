@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { geld } from "../components/ui/img";
 
 export default function Home() {
   return (
   <div className="flex items-center justify-center bg-white h-[100vh] w-[50%]">      
     <style>{'body { background-color: #0166FF; height:100%;}'}</style>
     <div className="flex flex-col gap-[40px] items-center">
-      <img className=" w-[150px]" src="Frame.png" alt="" />
+      {geld}
       <div className="flex flex-col items-center gap-3">
         <div className="text-4xl font-bold">Welcome Back</div>
         <div className="text-2xl text-gray-600">Welcome back, Please enter your details</div>

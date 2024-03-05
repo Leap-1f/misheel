@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { geld } from "../components/ui/img";
 
 
 export default function SignUp (){
@@ -6,7 +7,7 @@ export default function SignUp (){
     <style>{'body { background-color: #0166FF; height:100%;}'}</style>
     <div className="flex flex-col gap-[40px] items-center">
       <div>
-        <img className=" w-[150px]" src="Frame.png" alt="" />
+        {geld}
       </div>
       <div className="flex flex-col items-center gap-3">
         <div className="text-4xl font-bold">Create Geld account</div>
