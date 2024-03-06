@@ -16,11 +16,11 @@ export function Chart() {
         }
     ]
     })
-    return <div className="grid grid-cols-2 px-[200px] gap-6 max-xl:px-[100px] max-lg:grid-cols-1">
+    return <div className="grid grid-cols-2 px-[400px] gap-6 max-xl:px-[100px] max-lg:grid-cols-1">
         <div className=" bg-white rounded-2xl h-fit">
             <div className="font-bold p-3">Income - Expense</div>
             <hr />
-            <div className="">
+            <div className=" h-[400px]">
                 <BarChart chartData={userData}/>
             </div>
         </div>
@@ -30,7 +30,7 @@ export function Chart() {
                 <div className="text-gray-600">Jun 1 - Nov 30</div>
             </div>
             <hr />
-            <div className=" w-[400px]">
+            <div className=" w-[400px] ">
                 <PieChart chartData={userData}/>
             </div>
         </div>

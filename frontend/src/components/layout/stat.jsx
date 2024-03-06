@@ -3,8 +3,8 @@ import { TbCurrencyTugrik } from "react-icons/tb";
 import { FaArrowUp } from "react-icons/fa6";
 
 export function Stat() {
-    return <div className="grid grid-cols-3 gap-6 px-[200px] py-[35px] max-xl:px-[100px] max-lg:px-[50px] max-[900px]:grid-cols-2 max-sm:grid-cols-1">
-        <img className=" h-[250px]" src="card.png" alt="" />
+    return <div className="grid grid-cols-3 gap-6 px-[400px] py-[35px] max-xl:px-[100px] max-lg:px-[50px] max-[900px]:grid-cols-2 max-sm:grid-cols-1">
+        <img className=" h-[250px] w-full" src="card.png" alt="" />
         <div className=" bg-white h-[250px] rounded-2xl">
             <div className="flex items-center gap-2 p-5">
                 <GoDotFill className=" text-green-600"/>
@@ -24,7 +24,7 @@ export function Stat() {
         </div>
         <div className=" bg-white h-[250px] rounded-2xl">
             <div className="flex items-center gap-2 p-5">
-                <GoDotFill className=" text-blue-600"/>
+                <GoDotFill className=" text-[#0166FF]"/>
                 <div className=" font-semibold">Total Expenses</div>
             </div>
             <hr />   

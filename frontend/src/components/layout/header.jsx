@@ -12,7 +12,7 @@ export function Header() {
             </button>
         </div>
         <div className="flex gap-5">
-            <button className="flex items-center bg-blue-600 rounded-3xl px-4 gap-2 text-white">
+            <button className="flex items-center bg-[#0166FF] rounded-3xl px-4 gap-2 text-white">
                 <FaPlus />
                 <div className=" text-lg">Record</div>
             </button>
