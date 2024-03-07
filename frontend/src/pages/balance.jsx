@@ -2,8 +2,13 @@ import {
     balance,
     geld
 } from "../components/ui/img";  
-import Link from "next/link";
+import { useRouter } from "next/router";
 export default function Balance() {
+    const router = useRouter()
+    const handleClick = () => {
+        router.push("http://localhost:3000/finish")
+    }
+
     return <div className="flex flex-col items-center">
         <div className="flex flex-col items-center justify-center pt-[50px] gap-[40px]">
             <div>
@@ -24,9 +29,7 @@ export default function Balance() {
                 <input type="email" placeholder="email" className="h-[50px] w-full px-3 bg-gray-100 rounded-lg border-gray-500 border-[1px]" />
                 <div className=" text-xs text-gray-500 font-semibold">How much cash do you have in your wallet? </div>
             </div>
-            <Link href={"finish"}>
-                <button className="flex items-center justify-center bg-[#0166FF] w-[400px] h-10 rounded-lg text-white text-xl">Confirm</button>
-            </Link>
+            <button onClick={handleClick} className="flex items-center justify-center bg-[#0166FF] w-[400px] h-10 rounded-lg text-white text-xl">Confirm</button>
         </div>
     </div>
 }

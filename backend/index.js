@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from "cors";
-import fs from "fs";
 import { sql } from './config/database.js';
 import { user } from "./src/router/user.js";
+import bcrypt from "bcrypt";
 
 
 const app = express();
@@ -12,11 +12,14 @@ const PORT = 8080;
 
 app.use("/users", user)
 
- app.post("/users", async (req, res) => {
-  const data = await sql`INSERT INTO users (name, email) VALUES ('gumbee','gumbee@gmail.com') RETURNING *`;
-  res.send(data)
+ app.post("/signup", async (req, res) => {
+  const {name, email, password} = req.body;
+  const salt = bcrypt.genSaltSync(1);
+  const hashedPassword = await bcrypt.hash(password, salt); 
+  user.push({name: name, password: hashedPassword, email: email})
+  res.send("amjilltai uuslee")
  })
- app.post ("/users/createTable", async (req, res)=>{
+ app.post ("/signin", async (req, res)=>{
   const data = await sql`INSERT INTO users (name, email) VALUES ('gumbee','gumbee@gmail.com') RETURNING *`;
    console.log(data);
    res.send(data)

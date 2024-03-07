@@ -5,8 +5,12 @@ import {
 } from "../components/layout/index";
 import {geldlogo} from "../components/ui/img";
 import { FaPlus } from "react-icons/fa";
-import Link from "next/link";
+import { useRouter } from "next/router";
 export default function Dashboard() {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("http://localhost:3000/records")
+  }
   return (
     <div>
       <div className="flex justify-between px-[400px] max-xl:px-[100px] max-lg:px-[50px] py-[20px] h-[fit]">
@@ -16,9 +20,9 @@ export default function Dashboard() {
                 <div className=" text-lg font-bold">Dashboard</div>
             </button>
             <button>
-              <Link href={"records"}>
-                <div className=" text-lg">Records</div>
-              </Link>
+              
+                <div onClick={handleClick} className=" text-lg">Records</div>
+    
             </button>
         </div>
         <div className="flex gap-5">

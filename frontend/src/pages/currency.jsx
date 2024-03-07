@@ -3,10 +3,13 @@ import {
     geld
 } from "../components/ui/img"
 import { currSelector } from "@/components/ui/currencySelector"
-import Link from "next/link";
-
+import { useRouter } from "next/router";
 
 export default function Currency() {
+    const router = useRouter()
+    const handleClick = () => {
+        router.push("http://localhost:3000/balance")
+    }
     return <div className="flex flex-col items-center">
         <div className="flex flex-col items-center justify-center pt-[50px] gap-[40px]">
             <div>
@@ -27,9 +30,7 @@ export default function Currency() {
                 {currSelector}
                 <div className=" text-xs text-gray-500 font-semibold">Your base currency should be the one you use most often. All transaction in other currencies will be calculated based on this one </div>
             </div>
-            <Link href={"balance"}>
-                <button className="flex items-center justify-center bg-[#0166FF] h-10 w-[400px] rounded-lg text-white text-xl">Confirm</button>
-            </Link>
+            <button onClick={handleClick} className="flex items-center justify-center bg-[#0166FF] h-10 w-[400px] rounded-lg text-white text-xl">Confirm</button>
         </div>
     </div>
 }
