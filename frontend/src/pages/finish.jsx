@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 export default function Finish() {
     const router = useRouter()
     const handleClick = () => {
-        router.push("http://localhost:3000/dashboard")
+        router.push("/dashboard")
     }
     return <div className="flex flex-col items-center">
         <div className="flex flex-col items-center justify-center pt-[50px] gap-[40px]">

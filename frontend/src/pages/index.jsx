@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { geld } from "../components/ui/img";
 import { useRouter } from "next/router";
 
@@ -6,11 +5,10 @@ export default function Home() {
   const currency = useRouter()
   const signUp = useRouter()
   const logInHandleClick = () => {
-      currency.push("http://localhost:3000/currency")
-  
+      currency.push("/currency")
   }
   const handleClick = () => {
-      signUp.push("http://localhost:3000/signup")
+      signUp.push("/signup")
   }
   return (
   <div className="flex items-center justify-center bg-white h-[100vh] w-[50%]">      

@@ -21,7 +21,7 @@ export const signUp = async (req, res) => {
     }
 }
 export const signIn = async (req, res) => {
-    const { email, password } = req.body;
+    const { password } = req.body;
     try {
         const isValid = await bcrypt.compare(password, user[0].password);
         if (isValid) {

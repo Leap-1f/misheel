@@ -1,13 +1,15 @@
 import { FaPlus } from "react-icons/fa6";
 import { geldlogo } from "../components/ui/img";
 import { useRouter } from "next/router";
-import { MdRemoveRedEye } from "react-icons/md";
-import { MdArrowRight } from "react-icons/md";
+import { 
+    MdRemoveRedEye,
+    MdArrowRight  
+} from "react-icons/md";
 
 export default function Records() {
     const router = useRouter();
     const handleClick = () => {
-        router.push("http://localhost:3000/dashboard")
+        router.push("/dashboard")
     }
     return <div>
         <style>{'body {background-color: rgb(229 231 235)'}</style>

@@ -11,16 +11,17 @@ export default function SignUp (){
   const [repassword, setRepassword] = useState();
   const router = useRouter();
   const handleClick = () => {
-    router.push("http://localhost:3000/")
+    router.push("/")
   }
   const createData = async () => {
     if (name === undefined || email === undefined || password === undefined || repassword === undefined) {
       window.alert("hooson bn");
       return;
-    }
+    }   
     if (password !== repassword) {
       window.alert("nuuts ug taarahgui bn")
-    }
+    } 
+    
     try {
       const response = await fetch("http://localhost:8080/",{
         method: "POST",

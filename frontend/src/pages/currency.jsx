@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 export default function Currency() {
     const router = useRouter()
     const handleClick = () => {
-        router.push("http://localhost:3000/balance")
+        router.push("/balance")
     }
     return <div className="flex flex-col items-center">
         <div className="flex flex-col items-center justify-center pt-[50px] gap-[40px]">

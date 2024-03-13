@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 export default function Balance() {
     const router = useRouter()
     const handleClick = () => {
-        router.push("http://localhost:3000/finish")
+        router.push("/finish")
     }
 
     return <div className="flex flex-col items-center">
@@ -26,7 +26,7 @@ export default function Balance() {
                 <div className="font-bold text-2xl">Set up your cash Balance</div>
             </div>
             <div className="flex flex-col gap-3">
-                <input type="email" placeholder="email" className="h-[50px] w-full px-3 bg-gray-100 rounded-lg border-gray-500 border-[1px]" />
+                <input type="number" placeholder="cash" className="h-[50px] w-full px-3 bg-gray-100 rounded-lg border-gray-500 border-[1px]" />
                 <div className=" text-xs text-gray-500 font-semibold">How much cash do you have in your wallet? </div>
             </div>
             <button onClick={handleClick} className="flex items-center justify-center bg-[#0166FF] w-[400px] h-10 rounded-lg text-white text-xl">Confirm</button>

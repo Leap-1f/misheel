@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 export default function Dashboard() {
   const router = useRouter();
   const handleClick = () => {
-    router.push("http://localhost:3000/records")
+    router.push("/records")
   }
   return (
     <div>
