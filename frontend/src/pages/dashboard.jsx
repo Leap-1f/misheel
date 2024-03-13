@@ -13,7 +13,7 @@ export default function Dashboard() {
   }
   return (
     <div>
-      <div className="flex justify-between px-[400px] max-xl:px-[100px] max-lg:px-[50px] py-[20px] h-[fit]">
+      <div className="flex justify-between px-[200px] max-xl:px-[100px] max-lg:px-[50px] py-[20px] h-[fit]">
         <div className="flex gap-5">
             {geldlogo}
             <button>
