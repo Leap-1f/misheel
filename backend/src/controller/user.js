@@ -14,7 +14,7 @@ export const signUp = async (req, res) => {
     try {
         const salt = bcrypt.genSaltSync(1);
         const hashedPassword = await bcrypt.hash(password, salt);
-        const data = await sql `INSERT INTO users (name, email, password) VALUES (${name}, ${email}, ${hashedPassword})`
+        const data = await sql `INSERT INTO users (name, email, password) VALUES ('${name}', '${email}', '${hashedPassword}')`
         res.send(data)
     } catch (err) {
         console.log(err);
@@ -29,7 +29,7 @@ export const signIn = async (req, res) => {
             res.send("login succesfully");
         }
             window.alert("login unsuccesfull")
-            res.send("password & username not valid");
+            res.send("password & email not valid");
     } catch (err) {
         console.log(err);
     }

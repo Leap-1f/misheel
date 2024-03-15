@@ -1,7 +1,6 @@
 import { geld } from "../components/ui/img";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import uuidv4 from "uuid";
 
 
 export default function SignUp (){
@@ -20,18 +19,16 @@ export default function SignUp (){
     }   
     if (password !== repassword) {
       window.alert("nuuts ug taarahgui bn")
-    } 
+      } 
     
     try {
-      const response = await fetch("http://localhost:8080/",{
+      const response = await fetch("http://localhost:8080/users",{
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({name, email, password, id: uuidv4()}),
       });
-      console.log(body);
       const res = await response.json();
       console.log(res);
     } catch (err) {
