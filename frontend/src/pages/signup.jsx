@@ -4,36 +4,9 @@ import { useState } from "react";
 
 
 export default function SignUp (){
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [repassword, setRepassword] = useState();
   const router = useRouter();
   const handleClick = () => {
     router.push("/")
-  }
-  const createData = async () => {
-    if (name === undefined || email === undefined || password === undefined || repassword === undefined) {
-      window.alert("hooson bn");
-      return;
-    }   
-    if (password !== repassword) {
-      window.alert("nuuts ug taarahgui bn")
-      } 
-    
-    try {
-      const response = await fetch("http://localhost:8080/users",{
-        method: "POST",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-      });
-      const res = await response.json();
-      console.log(res);
-    } catch (err) {
-      console.error(err)
-    }
   }
     return (<div className="flex items-center justify-center bg-white h-[100vh] w-[50%]">      
     <style>{'body { background-color: #0166FF; height:100%;}'}</style>
@@ -48,7 +21,7 @@ export default function SignUp (){
         <input onChange={(event) => setEmail(event.target.value)} className="border-[1px] border-gray-300 bg-gray-100 rounded w-[450px] h-[50px] pl-3" type="email" placeholder="Email" />
         <input onChange={(event) => setPassword(event.target.value)} className="border-[1px] border-gray-300 bg-gray-100 rounded w-[450px] h-[50px] pl-3" type="password" placeholder="Password" />
         <input onChange={(event) => setRepassword(event.target.value)} className="border-[1px] border-gray-300 bg-gray-100 rounded w-[450px] h-[50px] pl-3" type="password" placeholder="Re-Password" />
-        <button onClick={createData} className=" bg-[#0166FF] text-white rounded-2xl w-[450px] h-[50px] text-xl">Sign up</button>
+        <button onClick={handleClick} className=" bg-[#0166FF] text-white rounded-2xl w-[450px] h-[50px] text-xl">Sign up</button>
       </div>
       <div className="flex gap-3 text-xl">
         <div>Already have account?</div>
