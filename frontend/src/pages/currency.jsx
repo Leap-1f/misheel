@@ -3,7 +3,7 @@ import {
     geld
 } from "../components/ui/img"
 import { useRouter } from "next/router";
-import { useState } from "react"
+import { useState, useContext } from "react";
 
 export default function Currency() {
     const [currData, setCurrData] = useState();

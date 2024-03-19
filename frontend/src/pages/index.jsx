@@ -1,11 +1,12 @@
 import { geld } from "../components/ui/img";
 import { useRouter } from "next/router";
+import Dashboard from "./dashboard";
 
 export default function Home() {
-  const currency = useRouter()
+  const Dashboard = useRouter()
   const signUp = useRouter()
   const logInHandleClick = () => {
-      currency.push("/currency")
+      Dashboard.push("/dashboard")
   }
   const handleClick = () => {
       signUp.push("/signup")

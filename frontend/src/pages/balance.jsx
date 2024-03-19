@@ -4,32 +4,9 @@ import {
 } from "../components/ui/img";  
 import { useRouter } from "next/router";
 export default function Balance() {
-    const [name, setName] = useState();
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-    const [repassword, setRepassword] = useState();
     const router = useRouter()
     const createData = async () => {
         router.push("/finish")
-        try {
-          const response = await fetch("http://localhost:8080/",{
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body:JSON.stringify({
-              name,
-              email,
-              password
-            })
-          });
-          const newData = await response.json();
-          setName(newData.name);
-          setEmail(newData.email);
-          setPassword(newData.password)
-        } catch (err) {
-          console.error(err)
-        }
       }
 
     return <div className="flex flex-col items-center">
