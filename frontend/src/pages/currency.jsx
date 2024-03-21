@@ -3,10 +3,13 @@ import {
     geld
 } from "../components/ui/img"
 import { useRouter } from "next/router";
-import { useState, useContext } from "react";
+import { useState, createContext, useContext } from "react";
 
 export default function Currency() {
     const [currData, setCurrData] = useState();
+    const NewUser = createContext({currData})
+    const currencyType = useContext(NewUser)
+    console.log(currencyType);
     const router = useRouter()
     const handleClick = () => {
         router.push("/balance")

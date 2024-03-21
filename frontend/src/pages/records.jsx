@@ -12,8 +12,8 @@ export default function Records() {
         router.push("/dashboard")
     }
     return <div>
-        <style>{'body {background-color: rgb(229 231 235)'}</style>
-        <div className="flex justify-between bg-white px-[400px] max-xl:px-[100px] max-lg:px-[50px] py-[20px]">
+        <style>{'body {background-color: rgb(229 231 235); height: 100vh}'}</style>
+        <div className="flex justify-between bg-white px-[200px] max-xl:px-[100px] max-lg:px-[50px] py-[20px]">
             <div className="flex gap-5">
                 {geldlogo}
                 <button>
@@ -31,7 +31,7 @@ export default function Records() {
                 <img src="avatar.png" alt="" />
             </div>
         </div>
-        <div className=" flex justify-between px-[400px] py-[50px]">
+        <div className="flex justify-between px-[200px] py-[50px] max-xl:px-[100px] max-lg:px-[50px] ">
             <div className="flex flex-col bg-gray-100 border-gray-400 border-[1px] rounded-xl w-fit gap-[30px] py-[30px] px-[20px] ">
                 <div className="flex flex-col gap-10">
                     <div className=" text-3xl font-bold">Records</div>
@@ -119,7 +119,7 @@ export default function Records() {
                     </div>
                 </div>
             </div>
-            <div className="bg-gray-100 border-black border-[1px] w-[500px]"></div>
+            <div className="bg-gray-100 border-gray-400 rounded-xl border-[1px] w-[500px]"></div>
         </div>
     </div>
 }

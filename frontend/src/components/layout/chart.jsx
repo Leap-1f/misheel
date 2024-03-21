@@ -16,11 +16,11 @@ export function Chart() {
         }
     ]
     })
-    return <div className="grid grid-cols-2 px-[400px] gap-6 max-xl:px-[100px] max-lg:grid-cols-1">
+    return <div className="grid grid-cols-2 px-[200px] gap-6 max-xl:px-[100px] max-lg:grid-cols-1">
         <div className=" bg-white rounded-2xl h-fit">
             <div className="font-bold p-3">Income - Expense</div>
             <hr />
-            <div className=" h-[400px]">
+            <div className=" h-[400px] max-[900]:h-[500px]">
                 <BarChart chartData={userData}/>
             </div>
         </div>

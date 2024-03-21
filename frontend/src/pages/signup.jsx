@@ -8,9 +8,9 @@ export default function SignUp (){
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [repassword, setRepassword] = useState();
-  const NewUser = createContext(name, email, password);
-  const User = useContext(NewUser)
-  console.log(User);
+  const NewUser = createContext( {name, email, password} );
+  const signUp = useContext(NewUser)
+  console.log(signUp);
   const currency = useRouter()
   const index = useRouter()
   const handleClick = async () => {

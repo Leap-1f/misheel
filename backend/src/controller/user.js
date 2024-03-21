@@ -10,11 +10,11 @@ export const getAllUsers = async (req, res) => {
     }
 }
 export const signUp = async (req, res) => {
-    const {name, email, password} = req.body;
+    const {name, email, password, amount, currData} = req.body;
     try {
         const salt = bcrypt.genSaltSync(1);
         const hashedPassword = await bcrypt.hash(password, salt);
-        const data = await sql `INSERT INTO users (name, email, password) VALUES ('${name}', '${email}', '${hashedPassword}')`
+        const data = await sql `INSERT INTO users (name, email, password) VALUES (${name}, ${email}, ${hashedPassword}, ${amount}, ${currData})`
         res.send(data)
     } catch (err) {
         console.log(err);
