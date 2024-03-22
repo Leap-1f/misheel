@@ -1,7 +1,7 @@
 import { useState, createContext, useContext } from "react";
 import {
-    balance,
-    geld
+    BalanceImg,
+    Geld
 } from "../components/ui/img";  
 import { useRouter } from "next/router";
 import {signUp} from "../pages/signup";
@@ -13,7 +13,7 @@ export default function Balance() {
     const router = useRouter()
     const createData = async () => {
         router.push("/finish")
-        const response = await fetch("http://localhost:8080/user", {
+        const response = await fetch("http://localhost:8080/api/users", {
             method: "POST",
             headers: {
                 Accept: "application/json, text/plain, */*",
@@ -25,18 +25,18 @@ export default function Balance() {
     }
     return <div className="flex flex-col items-center">
         <div className="flex flex-col items-center justify-center pt-[50px] gap-[40px]">
-            <div>
-                {geld}
-            </div>
-            <ul className="steps">
+            <Geld/>
+            <div className="steps">
                 <li className="step step-primary px-10">Currency</li>
                 <li className="step step-primary">Balance</li>
                 <li className="step">Finish</li>
-            </ul>
+            </div>
         </div>
         <div className="flex flex-col items-center pt-[80px] gap-8 w-[400px]">
             <div className="flex flex-col items-center gap-2">
-                <div>{balance}</div>
+                <div>
+                    <BalanceImg/>
+                </div>
                 <div className="font-bold text-2xl">Set up your cash Balance</div>
             </div>
             <div className="flex flex-col gap-3">

@@ -11,6 +11,7 @@ export const getAllUsers = async (req, res) => {
 }
 export const signUp = async (req, res) => {
     const {name, email, password, amount, currData} = req.body;
+    console.log(req.body);
     try {
         const salt = bcrypt.genSaltSync(1);
         const hashedPassword = await bcrypt.hash(password, salt);

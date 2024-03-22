@@ -1,6 +1,5 @@
-import { geld } from "../components/ui/img";
+import { Geld } from "../components/ui/img";
 import { useRouter } from "next/router";
-import Dashboard from "./dashboard";
 
 export default function Home() {
   const Dashboard = useRouter()
@@ -15,7 +14,7 @@ export default function Home() {
   <div className="flex items-center justify-center bg-white h-[100vh] w-[50%]">      
     <style>{'body { background-color: #0166FF; height:100%;}'}</style>
     <div className="flex flex-col gap-[40px] items-center">
-      {geld}
+      <Geld/>
       <div className="flex flex-col items-center gap-3">
         <div className="text-4xl font-bold">Welcome Back</div>
         <div className="text-2xl text-gray-600">Welcome back, Please enter your details</div>

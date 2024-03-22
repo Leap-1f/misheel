@@ -1,5 +1,5 @@
 import { FaPlus } from "react-icons/fa6";
-import { geldlogo } from "../components/ui/img";
+import { GeldLogo } from "../components/ui/img";
 import { useRouter } from "next/router";
 import { 
     MdRemoveRedEye,
@@ -15,7 +15,7 @@ export default function Records() {
         <style>{'body {background-color: rgb(229 231 235); height: 100vh}'}</style>
         <div className="flex justify-between bg-white px-[200px] max-xl:px-[100px] max-lg:px-[50px] py-[20px]">
             <div className="flex gap-5">
-                {geldlogo}
+                <GeldLogo/>
                 <button>
                     <div onClick={handleClick} className=" text-xl">Dashboard</div>
                 </button>

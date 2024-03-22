@@ -1,6 +1,6 @@
 import {
-    finish,
-    geld
+    FinishImg,
+    Geld
 } from "../components/ui/img";  
 import { useRouter } from "next/router";
 
@@ -11,9 +11,7 @@ export default function Finish() {
     }
     return <div className="flex flex-col items-center">
         <div className="flex flex-col items-center justify-center pt-[50px] gap-[40px]">
-            <div>
-                {geld}
-            </div>
+            <Geld/>
             <ul className="steps">
                 <li className="step step-primary px-10">Currency</li>
                 <li className="step step-primary">Balance</li>
@@ -22,7 +20,7 @@ export default function Finish() {
         </div>
         <div className="flex flex-col items-center pt-[80px] gap-8 w-[400px]">
             <div className="flex flex-col items-center gap-2">
-                <div>{finish}</div>
+                <FinishImg/>
                 <div className="font-bold text-2xl">Good job!</div>
             </div>
             <div className="flex flex-col gap-3">
